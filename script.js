@@ -11,7 +11,10 @@ var currentTime = $('h:mm:ss a');
 var currentDay = document.getElementById("currentDay"); //Our instructor gave us permission to use moment js in our homework for this week
 currentDay.textContent = moment().format('MMMM Do YYYY, h:mm:ss a'); // added time to display underneath header one 
 
+$(function() {
+  updateTimeBlockColor();
 
+})
 
 
 $(document).ready(function() { //Acceptance Criteria: wrap jquery, so that all html elements will load first 
@@ -64,6 +67,9 @@ function updateTimeBlockColor() { //remove/add class comparing time of time bloc
     })
 })
 }
+
+
+
 //description (this) uses for each loop to apply class
 //or remove class depended on current hour, split is used to remove hiphens,dashes or symbols 
 //between strings and numbers, parsing the class into a number , a class has quotation marks, which
