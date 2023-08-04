@@ -40,6 +40,19 @@ $('.description').each(function() { //for each function used to loop throught al
 });
  
 
+//WHEN I view the timeblocks for that day
+//THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+//depends on time of color change
+//future green, greyed out past, present red
+
+
+var timeBlock = $('.time-block');
+var currentTime = moment().hours();
+
+function updateTimeBlockColor() {
+
+}
+
 
 
 
