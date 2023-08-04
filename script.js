@@ -50,6 +50,12 @@ var timeBlock = $('.time-block');
 var currentTime = moment().hours();
 
 function updateTimeBlockColor() {
+  $('.time-block').each(function() {
+    var hr = parseInt($(this).attr('id').split('-')[1]); //description (this) uses for each loop to apply class
+                                                        //or remove class depended on current hour, split is used to remove hiphens,dashes or symbols 
+                                                        //between strings and numbers, parsing the class into a number , a class has quotation marks, which
+                                                        //won't equal the hour number that we need to compare 
+  })
 
 }
 
