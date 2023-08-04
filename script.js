@@ -22,13 +22,11 @@ storageInput.prop('disabled', true);//setting key to show the hour associated wi
 });
 
 
-var timeBlock = $('.time-block');
-
-
-
 function updateTimeBlockColor() {
   var currentTime = moment().startOf('hour'); //remove/add class comparing time of time block and current time 
+  var timeBlock = $('.time-block');
   timeBlock.each(function() {
+   
     var hr = parseInt($(this).attr('id').split('-')[1]);
     var timeBlockTime = moment().hour(hr).startOf('hour'); 
     
