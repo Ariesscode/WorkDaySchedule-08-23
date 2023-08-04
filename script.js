@@ -21,7 +21,6 @@ storageInput.prop('disabled', true);//setting key to show the hour associated wi
 }) 
 });
 
-
 function updateTimeBlockColor() {
   var currentTime = moment().startOf('hour'); //remove/add class comparing time of time block and current time 
   var timeBlock = $('.time-block');
