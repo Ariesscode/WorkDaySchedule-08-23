@@ -25,9 +25,9 @@ localStorage.setItem(inputId,eventText); //setting key to show the hour associat
 
 $('.description').each(function() {
   var hour = $(this).closest('.time-block').attr('id');
-  var eventSaved = localStorage.getItem(id);
+  var eventSaved = localStorage.getItem("id");
   if (eventSaved) {
-    $(this).val(savedEvent);
+    $(this).val(eventSaved);
   }
 })
 
