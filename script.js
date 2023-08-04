@@ -1,6 +1,3 @@
-var SaveBttn = document.querySelectorAll(".saveBtn");
-var headerOne = document.querySelector(".p-5");
-
 
 
 
@@ -18,8 +15,15 @@ var mySchedule = [
     ]// array of time as key and event as value
 
 var currentDay = document.getElementById("currentDay");
-currentDay.textContent = moment();
+currentDay.textContent = moment(); // added time to display underneath header one 
 
+
+
+
+
+
+saveBttn.addEventListener("click", saveInput);
+ 
 
     
 
