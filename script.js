@@ -17,12 +17,21 @@ $(document).ready(function() { //Acceptance Criteria: wrap jquery, so that all h
   saveButtns.on('click',function() { // I want the input entered in the text area "description" to 
 var storageInput = $(this).siblings('.description'); // finds input text area with a class of description
 var inputId = storageInput.closest('.time-block').attr('id'); //this finds the correct id value closest to this specified class
-var inputText = storageInput.val(); //retrieving the value of input to save in local storage 
-localStorage.setItem(inputId,inputText); //setting key to show the hour associated with the input 
+var eventText = storageInput.val(); //retrieving the value of input to save in local storage 
+localStorage.setItem(inputId,eventText); //setting key to show the hour associated with the input 
 }) 
-    
+});
 
+
+$('.description').each(function() {
+  var hour = $(this).closest('.time-block').attr('id');
+  var eventSaved = localStorage.getItem(id);
+  if (eventSaved) {
+    $(this).val(savedEvent);
+  }
 })
+
+
  
 
 
