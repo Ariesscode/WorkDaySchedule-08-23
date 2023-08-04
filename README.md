@@ -6,9 +6,8 @@ so that events or plans are saved to the local storage. Once the user stores the
 be displayed when user refreshes the browser. Each time displayed in the time block has an id which holds the key to
 local storage input. In this case I used the DOM tree method, in which you call the closest method to find
 all ancestors or matches to the specified element. In this case, the set attributes and classes matched and then I
-was able to grab the id, which was hour-x. In order for the saved events to stay on the page, I first used a method named
-"Read-only", which gave me the same output that I wanted, which was for saved events to be displayed in time block after
-browser was refreshed and to also make the time block uneditable. I came across another function which was "disabled", which 
+was able to grab the id, which was hour-x. In order for the saved events to stay on the page, I first used the "getItem() to retrieve from local storage and set the value to the input to be displayed. The user will be able to update and store plans each time they enter previous plans. The plans will still be added to local storage. Each time block had set classes, in which three different classes would be added or removed dependindg on the current hour. Class of
+"past" would be applied if the time block hour is below the current hour. Class "present" would be applied if the time block hour is equal to the current hour. Lastly, the "future" class would be applied if the current hour was before the time block hour. In the console log, you will be able to locate the local storage and see the saved time block id and the value of input, which is the saved event. I learned that when using moment.js you have to read all documentation on how to format, implement and syntax before using. I like the vanilla javascript, I find it easier to understand and it very readable to pick up on quickly. J-query and using third party API's can be very humbling, fun and a headache when first starting off. In the future, I will be implementing and practicing to build apps using third party API's and J-query. 
 
 ## Your Task
 
