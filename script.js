@@ -49,17 +49,26 @@ $('.description').each(function() { //for each function used to loop throught al
 var timeBlock = $('.time-block');
 var currentTime = moment().hours();
 
-function updateTimeBlockColor() {
+function updateTimeBlockColor() { //remove/add class comparing time of time block and current time 
   $('.time-block').each(function() {
-    var hr = parseInt($(this).attr('id').split('-')[1]); //description (this) uses for each loop to apply class
-                                                        //or remove class depended on current hour, split is used to remove hiphens,dashes or symbols 
-                                                        //between strings and numbers, parsing the class into a number , a class has quotation marks, which
-                                                        //won't equal the hour number that we need to compare 
-  })
-
+    var hr = parseInt($(this).attr('id').split('-')[1]); 
+    timeBlock.each(function() {
+      if (hr > currentTime) {
+        $(this).addClass('future').removeClass('past present'); //if time greater than the current hour a future color will apply and added class
+      } else if (hr < currentTime) {
+        $(this).addClass('past').removeClass('present future'); //if time less than current hour a red color will apply and added class
+      } else {
+        $(this).addClass('present').removeClass('future past'); //else which is currrent hour = to itself will show red color added to class 
+      }
+      
+    })
+})
 }
-
-
+//description (this) uses for each loop to apply class
+//or remove class depended on current hour, split is used to remove hiphens,dashes or symbols 
+//between strings and numbers, parsing the class into a number , a class has quotation marks, which
+//won't equal the hour number that we need to compare 
+        
 
 
  
