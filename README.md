@@ -14,11 +14,9 @@ was able to grab the id, which was hour-x. In order for the saved events to stay
 
 ## User Story
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+An employee would like a daily work planner, so
+that employee has the benefit of work efficiency. Employee 
+woud like an App that enables the employee to save plans entered in App.
 
 ## Acceptance Criteria
 
