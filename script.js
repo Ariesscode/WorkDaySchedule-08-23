@@ -1,4 +1,7 @@
-var SaveBttn = document.querySelectorAll(".saveBtn")
+var SaveBttn = document.querySelectorAll(".saveBtn");
+var headerOne = document.querySelector(".p-5");
+
+
 
 
 var mySchedule = [
@@ -13,6 +16,12 @@ var mySchedule = [
     { Time: "5 PM", Event: ""}
     
     ]// array of time as key and event as value
+
+var currentDay = document.getElementById("currentDay");
+currentDay.textContent = moment();
+
+
+    
 
 $(function () {
  
