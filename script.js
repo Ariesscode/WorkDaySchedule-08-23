@@ -17,7 +17,7 @@ var storageInput = $(this).siblings('.description'); // finds input text area wi
 var inputId = storageInput.closest('.time-block').attr('id'); //this finds the correct id value closest to this specified class
 var eventText = storageInput.val(); //retrieving the value of input to save in local storage 
 localStorage.setItem(inputId,eventText);
-storageInput.prop('disabled', true);//setting key to show the hour associated with the input 
+
 }) 
 });
 
@@ -47,8 +47,7 @@ $('.description').each(function() { //for each function used to loop throught al
   var eventSaved = localStorage.getItem(hour); //grab the event saved in $(this) id 
   if (eventSaved) {
     $(this).val(eventSaved); //event is the value of the description class
-    $(this).prop('disabled', true); //disabled will make it able to save to local storage and lock the event input, so that it is 
-                                    //Note: I would like to know the difference between read only and disabled, seem like both do the same thing
+    
   }
 
   
