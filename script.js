@@ -21,7 +21,7 @@ var storageInput = $(this).siblings('.description'); // finds input text area wi
 var inputId = storageInput.closest('.time-block').attr('id'); //this finds the correct id value closest to this specified class
 var eventText = storageInput.val(); //retrieving the value of input to save in local storage 
 localStorage.setItem(inputId,eventText);
-storageInput.prop('readonly', true);//setting key to show the hour associated with the input 
+storageInput.prop('disabled', true);//setting key to show the hour associated with the input 
 }) 
 });
 
@@ -29,12 +29,13 @@ storageInput.prop('readonly', true);//setting key to show the hour associated wi
 
 
 
-$('.description').each(function() {
-  var hour = $(this).closest('.time-block').attr('id');
-  var eventSaved = localStorage.getItem(hour);
+$('.description').each(function() { //for each function used to loop throught all text area via class of decription
+  var hour = $(this).closest('.time-block').attr('id'); 
+  var eventSaved = localStorage.getItem(hour); //grab the event saved in $(this) id 
   if (eventSaved) {
-    $(this).val(eventSaved);
-    $(this).prop('readonly', true);
+    $(this).val(eventSaved); //event is the value of the description class
+    $(this).prop('disabled', true); //readonly will make it able to save to local storage and lock the event input, so that it is 
+                                    
   }
 });
  
