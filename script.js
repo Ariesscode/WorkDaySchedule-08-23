@@ -34,8 +34,8 @@ $('.description').each(function() { //for each function used to loop throught al
   var eventSaved = localStorage.getItem(hour); //grab the event saved in $(this) id 
   if (eventSaved) {
     $(this).val(eventSaved); //event is the value of the description class
-    $(this).prop('disabled', true); //readonly will make it able to save to local storage and lock the event input, so that it is 
-                                    
+    $(this).prop('disabled', true); //disabled will make it able to save to local storage and lock the event input, so that it is 
+                                    //Note: I would like to know the difference between read only and disabled, seem like both do the same thing
   }
 });
  
