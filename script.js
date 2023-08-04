@@ -9,10 +9,10 @@ var currentTime = $('h:mm:ss a');
   
 
 var currentDay = document.getElementById("currentDay"); //Our instructor gave us permission to use moment js in our homework for this week
-currentDay.textContent = moment().format('MMMM Do YYYY, h:mm:ss a'); // added time to display underneath header one 
+currentDay.textContent = moment().format('MMMM Do YYYY, h:mm:ss A'); // added time to display underneath header one 
 
 $(function() {
-  updateTimeBlockColor();
+  updateTimeBlockColor(); //onload to run time block color to apply
 
 })
 
@@ -50,7 +50,7 @@ $('.description').each(function() { //for each function used to loop throught al
 
 
 var timeBlock = $('.time-block');
-var currentTime = moment().hours();
+var currentTime = moment().hours().;
 
 function updateTimeBlockColor() { //remove/add class comparing time of time block and current time 
   $('.time-block').each(function() {
