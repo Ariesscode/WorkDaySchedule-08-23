@@ -14,12 +14,24 @@ $(document).ready(function() { //Acceptance Criteria: wrap jquery, so that all h
 
   saveButtns.on('click',function() { // I want the input entered in the text area "description" to 
 var storageInput = $(this).siblings('.description'); // finds input text area with a class of description
-var inputId = storageInput.closest('.time-block').attr('id'); //this finds the correct id value closest to this specified class
-var eventText = storageInput.val(); //retrieving the value of input to save in local storage 
+var inputId = storageInput.closest('.time-block').attr('id');
+ //this finds the correct id value closest to this specified class
+var eventText = storageInput.val();
+ //retrieving the value of input to save in local storage 
 localStorage.setItem(inputId,eventText);
 
 }) 
 });
+
+$('.description').each(function() { //for each function used to loop throught all text area via class of decription
+  var hour = $(this).closest('.time-block').attr('id'); 
+  var eventSaved = localStorage.getItem(hour); //grab the event saved in $(this) id 
+  if (eventSaved) {
+    $(this).val(eventSaved); //event is the value of the description class
+    
+  }
+  });
+
 
 function updateTimeBlockColor() {
   var currentTime = moment().startOf('hour'); //remove/add class comparing time of time block and current time 
@@ -42,18 +54,6 @@ setInterval(updateTimeBlockColor, 60000);
 }
 
 
-$('.description').each(function() { //for each function used to loop throught all text area via class of decription
-  var hour = $(this).closest('.time-block').attr('id'); 
-  var eventSaved = localStorage.getItem(hour); //grab the event saved in $(this) id 
-  if (eventSaved) {
-    $(this).val(eventSaved); //event is the value of the description class
-    
-  }
-
-  
-
-
-});
 
 
 
